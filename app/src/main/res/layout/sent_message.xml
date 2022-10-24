@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content">-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginRight="5dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:background="@drawable/sent_message_background"-->
+<!--        >-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_sent_message"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="10dp"-->
+<!--            android:textSize="16sp"-->
+<!--            android:text="this is sent message"-->
+<!--            android:textColor="@color/black"/>-->
+
+<!--    </RelativeLayout>-->
+
+<!--</RelativeLayout>-->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="8dp"
+android:layout_marginBottom="8dp"
+android:layout_marginEnd="8dp"
+android:layout_marginStart="8dp">
+
+    <RelativeLayout
+        android:id="@+id/message_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+
+        android:background="@drawable/sent_message_background"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_sent_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="250dp"
+            android:minWidth="120dp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+            tools:text="nvvvvvvvvvvvvvvv" />
+
+        <TextView
+            android:id="@+id/tv_sent_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_sent_message"
+            android:layout_alignEnd="@id/tv_sent_message"
+            android:layout_marginEnd="8dp"
+            android:text="3/15"
+
+            android:textSize="12sp" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

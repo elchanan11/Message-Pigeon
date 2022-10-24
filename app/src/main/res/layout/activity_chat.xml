@@ -1,0 +1,208 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ee.developments.messagepigeon.activities.activities.activity.ChatActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abp_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_alignParentTop="true"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_task_list_activity"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rgUnits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/drawable_task_or_chat_tab_selector"
+        app:layout_constraintTop_toBottomOf="@+id/abp_layout"
+        >
+        <RadioButton
+            android:id="@+id/rbChat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/drawable_units_tab_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="CHAT"
+            android:textColor="@drawable/drawble_units_tab_text_color_selector"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+        <RadioButton
+            android:id="@+id/rbTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/drawable_units_tab_selector"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="TASK"
+            android:textColor="@drawable/drawble_units_tab_text_color_selector"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+    </RadioGroup>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_task_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/ll_write_messge"
+        android:layout_alignParentTop="true"
+
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/ll_add_task_to_task_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgUnits" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_chat_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/ll_write_messge"
+        android:layout_alignParentTop="true"
+
+        app:layout_constraintBottom_toTopOf="@+id/ll_write_messge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgUnits" />
+
+    <RelativeLayout
+        android:id="@+id/ll_add_task_to_task_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:weightSum="100"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_write_messge"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/rv_task_list"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_add_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="10dp"
+            android:elevation="@dimen/card_view_elevation"
+            android:outlineAmbientShadowColor="@color/secondary_text_color"
+            app:cardCornerRadius="@dimen/card_view_corner_radius">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/tv_add_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Add Task"
+                    android:textColor="@color/purple_700"
+
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:id="@+id/iv_add_task"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="17"
+                    android:src="@drawable/ic_baseline_add_16" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentRight="true"
+            >
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/custom_progressbar_drawable"
+                android:secondaryProgress="0" />
+
+
+            <TextView
+                android:id="@+id/txtProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/progressBar"
+                android:layout_centerInParent="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_write_messge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <EditText
+            android:id="@+id/et_chat_box"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="73"
+            android:background="@drawable/messege_box_background"
+            android:hint="Type a Messege"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/iv_sent_message"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="17"
+            android:src="@drawable/ic_baseline_send_24" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

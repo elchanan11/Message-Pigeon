@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "381952824349",
+    "project_id": "message-pigeon",
+    "storage_bucket": "message-pigeon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381952824349:android:fed4a039fea2483e10e2f4",
+        "android_client_info": {
+          "package_name": "ee.developments.messagepigeon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381952824349-etlg6ipbsbdu3kh44br3fbmt5cof1p0a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCQJv84K8UheUGL-7bO8VNwaU3FQbI72A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381952824349-etlg6ipbsbdu3kh44br3fbmt5cof1p0a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/back_ground_color.xml" value="0.143" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/back_ground_profile.xml" value="0.1725" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/backgrouns_serch_member.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/custom_progressbar_drawable.xml" value="0.12" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/drawable_radio_group_tab_background.xml" value="0.183" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/drawable_tab_selector.xml" value="0.184" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/drawable_task_or_chat_tab_selector.xml" value="0.163" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/drawable_units_tab_selector.xml" value="0.163" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/drawble_units_tab_text_color_selector.xml" value="0.163" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/ic_baseline_add_16.xml" value="0.184" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/ic_baseline_group_add_24.xml" value="0.1085" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/ic_baseline_power_settings_new_24.xml" value="0.184" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/intro_background.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/item_member.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/messege_box_background.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/recive_message_background.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/sent_message_background.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/shape_button_rounded.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/shape_dialog_rounded.xml" value="0.1085" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/drawable/white_border_shape_button_rounded.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/activity_base.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/activity_board.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/activity_chat.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/activity_create_new_task.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/activity_intro.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/activity_members.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/activity_my_profile_edit.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/activity_sign_in.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/back_ground_color_for_profile.xml" value="0.14322359982898675" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/dialog_progress.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/dialog_search_member.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/fragment_blank.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/fragment_chat.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/fragment_profile2.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/fragment_settings.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/item_add_member_from_board.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/item_chat.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/item_member1.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/item_task.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/profile_fragment_layout.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/recive_message.xml" value="0.36477987421383645" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/sent.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/layout/sent_message.xml" value="0.3240223463687151" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/menu/menu_add_member.xml" value="0.1" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/menu/menu_members.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/elcha/AndroidStudioProjects/Messagepigeon/app/src/main/res/menu/nav_menu.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

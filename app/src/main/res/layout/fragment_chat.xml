@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ee.developments.messagepigeon.activities.activities."
+    android:background="@drawable/ic_background"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:elevation="@dimen/card_view_elevation"
+        app:cardCornerRadius="@dimen/card_view_corner_radius">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_chats_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/no_chats_avlible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create New Chat"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="30dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

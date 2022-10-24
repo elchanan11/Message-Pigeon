@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="15dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/my_profile_screen_content_marginStartEnd"
+        android:layout_marginTop="@dimen/my_profile_screen_content_marginTopBottom"
+        android:layout_marginEnd="@dimen/my_profile_screen_content_marginStartEnd"
+        android:layout_marginBottom="@dimen/my_profile_screen_content_marginTopBottom"
+        android:elevation="@dimen/card_view_elevation"
+        app:cardBackgroundColor="#52A9D1"
+        app:cardCornerRadius="@dimen/card_view_corner_radius"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:id="@+id/ll_item_task_inside_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+        <TextView
+            android:id="@+id/taskTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Task"
+            android:textSize="40dp"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"/>
+
+
+        <TextView
+            android:id="@+id/taskDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Task details gkgkgkg fjff fjf fckc  d dkd"
+            android:textSize="25dp"
+            android:layout_margin="5dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_add_members_to_task"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="5dp"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabTaskComlited"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                android:backgroundTint="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_done_24"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
