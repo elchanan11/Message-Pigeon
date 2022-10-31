@@ -10,3 +10,4 @@ This project is used by the following companies:
 - Pizza B
 - Bagel B
 
+<h1>Chat Activity</h1>
