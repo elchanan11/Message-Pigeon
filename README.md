@@ -10,4 +10,12 @@ This project is used by the following companies:
 - Pizza B
 - Bagel B
 
-<img src = "Screenshot_20221031_135440.png"/>
+<h3>Board Activity</h3
+  
+<img src="Screenshot_20221031_135440.png" 
+     width="200" 
+     height="400" />
+  
+  <img src="Screenshot_20221031_135440.png" 
+     width="200" 
+     height="400" />
