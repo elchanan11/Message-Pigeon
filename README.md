@@ -10,4 +10,4 @@ This project is used by the following companies:
 - Pizza B
 - Bagel B
 
-<h1>Chat Activity</h1>
+<img src = "Screenshot_20221031_135440.png"/>
