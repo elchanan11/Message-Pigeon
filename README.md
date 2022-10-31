@@ -27,4 +27,12 @@ This project is used by the following companies:
   <img src="task activity.png" 
      width="200" 
      height="400" />
+     
+   <img src="edit_profile_activity.png" 
+     width="200" 
+     height="400" /> 
+     
+   <img src="profile_activity.png" 
+     width="200" 
+     height="400" />   
    
