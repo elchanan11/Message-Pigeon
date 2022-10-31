@@ -6,7 +6,6 @@ import android.content.ContentValues.TAG
 import android.util.Log
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
@@ -466,6 +465,31 @@ class FireStore {
             }
     }
 
+    fun loadFCMtokensOfAssighnedMemberstosepcificBoard(activity: ChatActivity, mAssignedUserid: java.util.ArrayList<String>){
+        mFireStore.collection(Constans.USERS)
+            .get().addOnSuccessListener {
+                document ->
+                val mUersFCM: ArrayList<String> = ArrayList()
+
+                Log.d("inside","loadFCMtokensOfAssighnedMemberstosepcificBoard")
+                for (i in document){
+                    Log.d("i",i.id)
+                    for (j in mAssignedUserid){
+                        Log.d("j",j.toString())
+                        if (i.id == j) {
+
+                            if (i.id != getCurrentUid()) {
+                                val user = i.toObject(User::class.java)
+                                mUersFCM.add(user.fcmToken)
+                                Log.e("fcm", user.fcmToken)
+                            }
+                        }
+                    }
+                }
+                activity.getFcmOfAssinedUsersSucess(mUersFCM)
+            }
+    }
+
     fun updateTimeStamp(activity: Activity,boardHashMap: HashMap<String, Any>,board: Board){
         Log.d("updateTimeStamp",board.documentId.toString())
         Log.d("updateTimeStamp",boardHashMap.toString())
@@ -489,7 +513,7 @@ class FireStore {
 
     }
 
-    fun updateUserProfileData(activity: MyProfileEditActivity,
+    fun updateUserProfileData(activity: Activity,
                               userHashMap: HashMap<String, Any>,oldName:String,isNameUpdated: Boolean){
         mFireStore.collection(Constans.USERS)
             .document(getCurrentUid())
@@ -505,9 +529,22 @@ class FireStore {
                     val boardHashMap = HashMap<String, Any>()
 
                 }
+                when(activity){
+                    is MainActivity ->{
+                        activity.tokenUpdateSuccess()
+                    }
+                }
             }.addOnFailureListener {
                 e ->
-                activity.hideProgressDialog()
+                when(activity){
+                    is MainActivity ->{
+                        activity.hideProgressDialog()
+                    }
+                    is MyProfileEditActivity ->{
+                        activity.hideProgressDialog()
+                    }
+                }
+
                 Log.e(activity.javaClass.simpleName, "profile data Error")
 
             }

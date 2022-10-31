@@ -2,6 +2,7 @@ package ee.developments.messagepigeon.activities.activities.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.os.AsyncTask
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -26,7 +27,14 @@ import ee.developments.messagepigeon.activities.activities.models.Task
 import ee.developments.messagepigeon.activities.activities.swipeToDelete.SwipeToDeleteCallback
 import ee.developments.messagepigeon.activities.activities.utils.Constans
 import kotlinx.android.synthetic.main.activity_chat.*
-import kotlinx.android.synthetic.main.fragment_chat.view.*
+import org.json.JSONObject
+import java.io.BufferedReader
+import java.io.DataOutputStream
+import java.io.IOException
+import java.io.InputStreamReader
+import java.net.HttpURLConnection
+import java.net.SocketTimeoutException
+import java.net.URL
 import java.text.SimpleDateFormat
 import java.time.Instant
 import java.time.format.DateTimeFormatter
@@ -38,6 +46,7 @@ class ChatActivity : BaseActivity() {
     private lateinit var messageAdapter: MaessageAdapter
     private var mBoardChatDetails: Board? = null
     private var reciveDocumentId: String? = null
+    private var reciveBoardName: String? = null
 
     private var mMessageRoom: String? = null
     private lateinit var mDbRef :DatabaseReference
@@ -54,7 +63,7 @@ class ChatActivity : BaseActivity() {
     private lateinit var progressBar: ProgressBar
     private var pStatus: Int? = null
 
-
+    private var fcmTokens: ArrayList<String> = ArrayList()
 
     @SuppressLint("LongLogTag")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,6 +77,8 @@ class ChatActivity : BaseActivity() {
         }
 
         val senderId = intent.getStringExtra("uid")
+        reciveBoardName = intent.getStringExtra("boardName")
+        Log.d("Board name", reciveBoardName.toString())
         reciveDocumentId = intent.getStringExtra(Constans.DOCUMENT_ID)
         Constans.DOCUMENTt_ID = reciveDocumentId!!
         chatPositionInBoard = intent.getIntExtra("position",0)
@@ -76,7 +87,12 @@ class ChatActivity : BaseActivity() {
 
         setupActionBar(mBoardChatDetails!!.name)
 
+
         mDbRef = FirebaseDatabase.getInstance().getReference()
+        if (mBoardChatDetails!!.assinedTo.isNotEmpty()){
+            Log.d("assinedTo", mBoardChatDetails!!.assinedTo.toString())
+            FireStore().loadFCMtokensOfAssighnedMemberstosepcificBoard(this, mBoardChatDetails!!.assinedTo)
+        }
         messageList = ArrayList()
         setUpMaessegeAdapter()
 
@@ -168,8 +184,6 @@ class ChatActivity : BaseActivity() {
 
                 FireStore().getBoardsList()
 
-//                    val chatBoardAdapter = rv_chats_list.adapter
-//                    chatBoardAdapter?.notifyDataSetChanged()
 
                  val temp = Constans.BOARDS_CHATS_LIST[chatPositionInBoard!!]
                 Constans.BOARDS_CHATS_LIST.remove(temp)
@@ -181,6 +195,13 @@ class ChatActivity : BaseActivity() {
                 chatsAdapter.refreshOrderItems(chatPositionInBoard!!)
 
                 timeStampChanged = true
+
+//                runOnUiThread {
+                    //for (i in fcmTokens) {
+                        Log.e("token item from list","")
+                    //}
+//                }
+
             }
         }
         rbChat.setOnClickListener{
@@ -200,9 +221,6 @@ class ChatActivity : BaseActivity() {
             val intent = Intent(this, CreateNewTask::class.java)
             startActivityForResult(intent, Constans.CREATE_NEW_TASK_REQUEST_CODE)
         }
-
-
-
     }
 
 
@@ -238,7 +256,7 @@ class ChatActivity : BaseActivity() {
         rv_task_list.setHasFixedSize(true)
 
         taskAdapter = TaskAdapter(this,tasks)
-        Log.e("messageList",tasks.toString())
+        Log.e("Tasks",tasks.toString())
 
         rv_task_list.adapter = taskAdapter
         flagAdapterCreated = true
@@ -372,6 +390,11 @@ class ChatActivity : BaseActivity() {
 
     fun taskComplitedUpdatedSuccefully() {
         FireStore().getTasksListListener(this)
+    }
+
+    fun getFcmOfAssinedUsersSucess(usersFCM: ArrayList<String>) {
+        fcmTokens = usersFCM
+        Log.d("fcmOfAssinedUsersSucess", fcmTokens.toString())
     }
 
 }

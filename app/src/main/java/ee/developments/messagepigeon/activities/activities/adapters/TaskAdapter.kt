@@ -60,7 +60,7 @@ class TaskAdapter (
         Log.e("itemId", item.taskId.toString())
 //        list.removeAt(adapterPosition)
 //        notifyItemRemoved(adapterPosition)
-        FireStore().deleteTaskItem(this,item.taskId,0)
+        //FireStore().deleteTaskItem(this,item.taskId,0)
     }
 
     interface OnClickListener{

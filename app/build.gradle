@@ -42,6 +42,7 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     implementation 'com.github.bumptech.glide:glide:4.13.2'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.0.8'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
 
     implementation 'com.karumi:dexter:6.2.3'
@@ -57,6 +58,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:21.0.8'
     implementation 'com.google.firebase:firebase-storage:20.0.2'
     implementation platform('com.google.firebase:firebase-bom:30.5.0')
+    implementation 'com.google.firebase:firebase-messaging:23.1.0'
 
 //for swipe to delete
     implementation 'com.ernestoyaquello.dragdropswiperecyclerview:drag-drop-swipe-recyclerview:1.1.1'

@@ -147,7 +147,7 @@ class fragment_chat : Fragment() {
                         Log.i("fragment chat", "on click")
                         val intent = Intent(context, ChatActivity::class.java)
                         Log.d("board id", model.documentId)
-
+                        intent.putExtra("boardName",model.name )
                         intent.putExtra(Constans.BOARD_CHAT_DETAILS, model)
                         intent.putExtra("uid", FirebaseAuth.getInstance().currentUser?.uid )
                         intent.putExtra(Constans.DOCUMENT_ID, model.documentId)

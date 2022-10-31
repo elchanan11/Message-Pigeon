@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "381952824349",
+    "firebase_url": "https://message-pigeon-default-rtdb.firebaseio.com",
     "project_id": "message-pigeon",
     "storage_bucket": "message-pigeon.appspot.com"
   },
